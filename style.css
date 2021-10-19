@@ -1,0 +1,115 @@
+:root {
+  font-size: 0.9375em;
+
+  box-sizing: border-box;
+
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--very-light-gray);
+  background-color: var(--very-light-gray);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.main-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  max-width: 96em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 0.7em;
+  overflow: hidden;
+  max-width: 60em;
+}
+
+.card-list__card {
+  flex: 1;
+  min-width: 16em;
+  background-repeat: no-repeat;
+  background-position: top 3em left 3em;
+  padding: 7.5em 3em 3em;
+}
+
+.card--bright-orange {
+  background-image: url("images/icon-sedans.svg");
+  background-color: var(--bright-orange);
+}
+
+.card--light-cyan {
+  background-image: url("images/icon-suvs.svg");
+  background-color: var(--dark-cyan);
+}
+
+.card--dark-cyan {
+  background-image: url("images/icon-luxury.svg");
+  background-color: var(--very-dark-cyan);
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+.card__text {
+  color: var(--transparent-white);
+  margin-top: 1em;
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: 5.5em;
+  padding: 0.75em 2.1em;
+  text-decoration: none;
+  padding: 0.65em 2em;
+  border-radius: 2em;
+  background-color: var(--very-light-gray);
+  border: 2px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+.card__link:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+.card__link--bright-orange {
+  color: var(--bright-orange);
+}
+
+.card__link--light-cyan {
+  color: var(--dark-cyan);
+}
+
+.card__link--dark-cyan {
+  color: var(--very-dark-cyan);
+}
